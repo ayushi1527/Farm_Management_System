@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { CheckSquare, Square, Calendar, AlertCircle, Filter } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { mockChecklistItems } from '../../data/mockData';
 // import { ChecklistItem } from '../../types'; // Not needed in JSX
+import { useLanguage } from "../context/LanguageContext";
+import { mockChecklistItems } from "../data/mockData";
 
 export function DigitalChecklist() {
   const { t } = useLanguage();

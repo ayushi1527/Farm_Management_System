@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AlertTriangle, Bell, MapPin, Calendar, Filter, X } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { mockAlerts } from '../../data/mockData';
+import { useLanguage } from "../context/LanguageContext";
+import { mockAlerts } from "../data/mockData";
 
 export function AlertsPanel() {
   const { t } = useLanguage();

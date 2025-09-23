@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Menu } from 'lucide-react';
-// import { useAuth } from '../../context/AuthContext';
-// import { useLanguage } from '../../context/LanguageContext';
-// import { LanguageSwitcher } from '../LanguageSwitcher';
+import { useAuth } from '../context/AuthContext';
+import { useLanguage } from "../context/LanguageContext";
+import { LanguageSwitcher } from '../components/LanguageSwitcher'; // Corrected Path
 import { Sidebar } from '../components/Sidebar';
 import { DashboardOverview } from './DashboardOverview';
 import { RiskAssessment } from './RiskAssessment';
