@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { BarChart3, AlertTriangle, CheckCircle, XCircle, TrendingUp } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { mockRiskFactors } from '../../data/mockData';
-import { calculateRiskScore, getRiskLevel, getRiskColor } from '../../utils/riskCalculator';
+import { mockRiskFactors } from '../data/mockData';
+import { calculateRiskScore, getRiskLevel, getRiskColor } from "../utils/riskCalculator";
+import { useLanguage } from "../context/LanguageContext";
 
 export function RiskAssessment() {
   const { t } = useLanguage();

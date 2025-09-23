@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart3, CheckSquare, BookOpen, AlertTriangle, TrendingUp, Shield } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { mockRiskFactors, mockChecklistItems, mockTrainingModules, mockAlerts } from '../../data/mockData';
-import { calculateRiskScore, getRiskLevel, getRiskColor } from '../../utils/riskCalculator';
+import { useLanguage } from "../context/LanguageContext";
+import { mockRiskFactors, mockChecklistItems, mockTrainingModules, mockAlerts } from '../data/mockData';
+import { calculateRiskScore, getRiskLevel, getRiskColor } from "../utils/riskCalculator";
 
 export function DashboardOverview() {
   const { t } = useLanguage();

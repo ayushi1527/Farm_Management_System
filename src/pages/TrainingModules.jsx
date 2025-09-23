@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, Play, CheckCircle, Clock, Award } from 'lucide-react';
-import { useLanguage } from '../../context/LanguageContext';
-import { mockTrainingModules } from '../../data/mockData';
+import { useLanguage } from "../context/LanguageContext";
+import { mockTrainingModules } from "../data/mockData";
 
 export function TrainingModules() {
   const { t } = useLanguage();
