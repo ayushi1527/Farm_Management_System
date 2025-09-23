@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, CheckCircle, Shield, BarChart2, Bell, Globe, ChevronDown } from 'lucide-react';
 
-import '../App.css';
-import heroImage from '../assets/hero image.avif';
+import "./App.css";
+import heroImage from './assets/hero image.avif';
 
 // --- Helper Functions ---
 
@@ -185,7 +185,7 @@ const SectionWrapper = ({ children, id, className = '' }) => (
 
 // --- Main Landing Page Component ---
 
-export function LandingPage() {
+export default function App() {
   const { t, i18n } = useTranslation();
 
   // ✅ FIXED: added features data
