@@ -104,6 +104,7 @@ export default function SignUpPage() {
           )}
 
           {/* Sign Up Button */}
+          <Link to="/dashboard">
           <button
             type="submit"
             disabled={loading}
@@ -111,6 +112,7 @@ export default function SignUpPage() {
           >
             {loading? 'Creating Account...' : 'Sign Up'}
           </button>
+          </Link>
         </form>
 
         {/* Link to Login page */}
