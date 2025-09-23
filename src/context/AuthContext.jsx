@@ -9,13 +9,8 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const checkUserStatus = async () => {
       await new Promise(resolve => setTimeout(resolve, 500));
-      const loggedInUser = {
-        name: 'John Doe',
-        farmName: 'Green Meadows Farm',
-        location: 'Rural India',
-        role: 'Farmer'
-      };
-      setUser(loggedInUser);
+      // By default, no user is logged in. You can add logic to check localStorage or cookies here.
+      setUser(null);
       setLoading(false);
     };
     checkUserStatus();
