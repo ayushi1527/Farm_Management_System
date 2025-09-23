@@ -36,7 +36,7 @@ export default function App() {
         {/* Header */}
         <header className="sticky top-0 z-50 bg-white shadow-sm py-4">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <div className="text-xl font-bold text-teal-700">FarmGuard</div>
+            <div className="text-xl font-bold text-teal-700">{t('farmguard')}</div>
 
             {/* Hamburger menu for mobile */}
             <div className="flex items-center gap-4">
@@ -92,8 +92,8 @@ export default function App() {
                 </div>
 
                 {/* Nav Links */}
-                <a href="#core-features" className="py-2 text-gray-700 hover:text-teal-700 font-medium" onClick={() => setMenuOpen(false)}>Features</a>
-                <a href="#how" className="py-2 text-gray-700 hover:text-teal-700 font-medium" onClick={() => setMenuOpen(false)}>How it works</a>
+                <a href="#core-features" className="py-2 text-gray-700 hover:text-teal-700 font-medium" onClick={() => setMenuOpen(false)}>{t('features')}</a>
+                <a href="#how" className="py-2 text-gray-700 hover:text-teal-700 font-medium" onClick={() => setMenuOpen(false)}>{t('how_it_works')}</a>
 
                 {/* Login / SignUp Links */}
                 <div className="flex gap-2">
@@ -102,15 +102,15 @@ export default function App() {
                     className="btn bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-full transition-colors"
                     onClick={() => setMenuOpen(false)}
                   >
-                    Login
-                  </Link>
-                  <Link
-                    to="/signup"
-                    className="btn bg-white hover:bg-gray-100 text-teal-700 font-semibold py-2 px-6 rounded-full transition-colors border border-teal-600"
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
+                      {t('login')}
+                    </Link>
+                    <Link
+                      to="/signup"
+                      className="btn bg-white hover:bg-gray-100 text-teal-700 font-semibold py-2 px-6 rounded-full transition-colors border border-teal-600"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {t('signup')}
+                    </Link>
                 </div>
               </div>
             </nav>
@@ -129,10 +129,10 @@ export default function App() {
           }}
         >
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Digital Biosecurity for Safer Farms</h1>
-            <p className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-8">Protect poultry & livestock with simple tools, real-time alerts, and digital records.</p>
+            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-4">{t('digital_biosecurity')}</h1>
+            <p className="text-lg md:text-xl font-light max-w-2xl mx-auto mb-8">{t('protect_poultry')}</p>
             <div className="flex justify-center space-x-4">
-              <a className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-colors cta-pulse" href="#get-started">Start Protecting Your Farm</a>
+              <a className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition-colors cta-pulse" href="#get-started">{t('start_protecting')}</a>
             </div>
           </div>
         </header>
@@ -141,30 +141,30 @@ export default function App() {
           {/* Core Features */}
           <section id="core-features" className="py-16 md:py-24">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Features</h2>
-              <p className="text-gray-600 max-w-3xl mx-auto mb-12">What we offer to keep your farm safe and productive.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('core_features')}</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-12">{t('what_we_offer')}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <FeatureItem
                   icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>}
-                  title="Risk Assessment & Advice"
-                  description="Quick surveys with prioritized actions." />
+                  title={t('risk_assessment')}
+                  description={t('quick_surveys')} />
 
                 <FeatureItem
                   icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8a6 6 0 0 0-12 0v4l-2 2v1h16v-1l-2-2V8"/></svg>}
-                  title="Real-Time Outbreak Alerts"
-                  description="Local and regional alerts to act fast." />
+                  title={t('real_time_alerts')}
+                  description={t('local_alerts')} />
 
                 <FeatureItem
                   icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11"/></svg>}
-                  title="Compliance & Training Tools"
-                  description="Digital checklists and short training modules." />
+                  title={t('compliance_training')}
+                  description={t('digital_checklists')} />
 
                 <div className="lg:col-span-3 flex justify-center">
                   <div className="w-full max-w-sm">
                     <FeatureItem
                       icon={<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/><path d="M7 13l3 3 7-7"/></svg>}
-                      title="Data for Smarter Decisions"
-                      description="Simple dashboards and exportable reports." />
+                      title={t('data_decisions')}
+                      description={t('simple_dashboards')} />
                   </div>
                 </div>
               </div>
@@ -174,12 +174,12 @@ export default function App() {
           {/* How It Works */}
           <section id="how" className="bg-gray-100 py-16 md:py-24">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">How it works</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto mb-12">A simple, three-step process to a safer farm.</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('how_it_works_title')}</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto mb-12">{t('three_step_process')}</p>
               <div className="how-line">
-                <HowItWorksStep step="1" title="Assess your farm" description="Run guided checks and get a prioritized plan." />
-                <HowItWorksStep step="2" title="Get guidance & alerts" description="Receive local alerts and action steps." />
-                <HowItWorksStep step="3" title="Track compliance digitally" description="Keep logs and reports for audits and decisions." />
+                <HowItWorksStep step="1" title={t('assess_farm')} description={t('run_guided_checks')} />
+                <HowItWorksStep step="2" title={t('get_guidance_alerts')} description={t('receive_local_alerts')} />
+                <HowItWorksStep step="3" title={t('track_compliance')} description={t('keep_logs')} />
               </div>
             </div>
           </section>
@@ -187,11 +187,11 @@ export default function App() {
           {/* Testimonials */}
           <section className="py-16 md:py-24 bg-white">
             <div className="container mx-auto px-4 text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Users Say</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-12">{t('what_our_users_say')}</h2>
               <div className="testimonials-grid">
-                <Testimonial quote="FarmGuard helped us standardize sanitation across several units — our flock health improved noticeably." name="Priya Sharma" role="Poultry Farmer" />
-                <Testimonial quote="The real-time alerts helped us isolate an issue before it spread across pens." name="Ramesh Kumar" role="Farm Manager" />
-                <Testimonial quote="Digital records made reporting to our cooperative much faster and more accurate." name="Ananya Gupta" role="Biosecurity Lead" />
+                <Testimonial quote={t('testimonial1')} name="Priya Sharma" role="Poultry Farmer" />
+                <Testimonial quote={t('testimonial2')} name="Ramesh Kumar" role="Farm Manager" />
+                <Testimonial quote={t('testimonial3')} name="Ananya Gupta" role="Biosecurity Lead" />
               </div>
             </div>
           </section>
@@ -199,9 +199,9 @@ export default function App() {
           {/* Final CTA */}
           <section id="get-started" className="py-16 md:py-24 bg-teal-700 text-white text-center">
             <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the movement for safer farming.</h2>
-              <p className="text-gray-200 max-w-3xl mx-auto mb-8">Ready to take control of your farm's biosecurity? Get started with FarmGuard today.</p>
-              <a className="bg-white text-teal-700 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-shadow" href="#">Start Now</a>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('join_movement')}</h2>
+              <p className="text-gray-200 max-w-3xl mx-auto mb-8">{t('ready_to_control')}</p>
+              <a className="bg-white text-teal-700 font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition-shadow" href="#">{t('start_now')}</a>
             </div>
           </section>
         </main>
@@ -211,8 +211,8 @@ export default function App() {
           <div className="footer-inner">
             <div className="footer-grid">
               <div className="footer-brand">
-                <div className="text-2xl font-bold">FarmGuard</div>
-                <p className="mt-3 text-sm">Protecting poultry & livestock with simple, actionable biosecurity tools. Mobile-friendly, field-ready.</p>
+                <div className="text-2xl font-bold">{t('farmguard')}</div>
+                <p className="mt-3 text-sm">{t('protect_poultry')}</p>
                 <div className="mt-4 social">
                   <a href="#" aria-label="Facebook"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3V2z" fill="currentColor"/></svg> </a>
                   <a href="#" aria-label="X"> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 4.5L19.5 8 23 11.5 20.5 14 17 10.5 13.5 14 11 11.5 14.5 8 11 4.5 13.5 2 17 5.5 20.5 2 23 4.5Z" fill="currentColor"/></svg> </a>
@@ -220,37 +220,37 @@ export default function App() {
               </div>
 
               <div className="footer-links">
-                <h4>Product</h4>
+                <h4>{t('features')}</h4>
                 <ul>
-                  <li><a href="#core-features">Features</a></li>
-                  <li><a href="#how">How it works</a></li>
-                  <li><Link to="/LoginPage">Login/SignUp</Link></li>
+                  <li><a href="#core-features">{t('features')}</a></li>
+                  <li><a href="#how">{t('how_it_works')}</a></li>
+                  <li><Link to="/LoginPage">{t('login_signup')}</Link></li>
                 </ul>
               </div>
 
               <div className="footer-links">
-                <h4>Resources</h4>
+                <h4>{t('resources')}</h4>
                 <ul>
-                  <li><a href="#">Guides</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">{t('guides')}</a></li>
+                  <li><a href="#">{t('support')}</a></li>
+                  <li><a href="#">{t('privacy_policy')}</a></li>
                 </ul>
               </div>
 
               <div className="footer-contact">
-                <h4>Get updates</h4>
-                <p className="text-sm">Subscribe to occasional product updates and best practices.</p>
+                <h4>{t('get_updates')}</h4>
+                <p className="text-sm">{t('subscribe_updates')}</p>
                 <form className="newsletter" onSubmit={(e)=>e.preventDefault()}>
-                  <input type="email" placeholder="you@farm.com" aria-label="email" />
-                  <button className="btn primary" type="submit">Subscribe</button>
+                  <input type="email" placeholder={t('email_placeholder')} aria-label="email" />
+                  <button className="btn primary" type="submit">{t('subscribe')}</button>
                 </form>
-                <div className="mt-4 text-sm">Contact: <a href="mailto:hello@farmguard.example">hello@farmguard.example</a></div>
+                <div className="mt-4 text-sm">{t('contact')}: <a href="mailto:hello@farmguard.example">hello@farmguard.example</a></div>
               </div>
             </div>
 
             <div className="footer-bottom">
-              <div>© {new Date().getFullYear()} FarmGuard — All rights reserved.</div>
-              <div className="muted">Built for smallholder farms</div>
+              <div>© {new Date().getFullYear()} {t('farmguard')} — {t('all_rights_reserved')}</div>
+              <div className="muted">{t('built_for_smallholders')}</div>
             </div>
           </div>
         </footer>
