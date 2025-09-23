@@ -100,6 +100,7 @@ export default function LoginPage() {
 
           {/* Login Button */}
           {/* The button style matches the "Get Started" button from your landing page */}
+          <Link to="/dashboard">
           <button
             type="submit"
             disabled={loading}
@@ -107,6 +108,7 @@ export default function LoginPage() {
           >
             {loading? 'Logging in...' : 'Login'}
           </button>
+          </Link>
         </form>
 
         {/* Link to Sign Up page */}
